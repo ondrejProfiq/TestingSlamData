@@ -56,7 +56,7 @@ exports.config = {
     ui: 'bdd',
     compilers: ['js:babel-register'],
     timeout: 900000,
-    grep: 'INDEX_002',
+    //grep: 'INDEX_003',
   },
   // Gets executed once before all workers get launched.
   // onPrepare: function (config, capabilities) {
