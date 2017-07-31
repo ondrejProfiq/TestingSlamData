@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="init_tests" timestamp="2017-07-31T09:56:44" time="5.395" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="5da44458b5550d7f7ace72a60d2fd007"/>
+      <property name="suiteName" value="INIT tests"/>
+      <property name="capabilities" value="chrome"/>
+      <property name="file" value="./test/specs/init/init.js"/>
+    </properties>
+    <testcase classname="chrome.init_tests" name="index_002_menu_works" time="1.828">
+      <system-out>
+        <![CDATA[
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/elements - {"using":"xpath","value":"//div[@title=\"Show header\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1715946388,"value":[{"ELEMENT":"1"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/1/displayed - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":916475019,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//div[@title=\"Show header\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1788774923,"value":{"ELEMENT":"1"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/1/click - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1193553205,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Help\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1543979155,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/2/displayed - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1150980649,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Settings\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":875157134,"value":{"ELEMENT":"3"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/3/displayed - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":338477987,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//div[@title=\"Hide header\"]"}
+RESULT: {"message":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@title=\"Hide header\"]\"}","type":"RuntimeError","screenshot":"[base64] 1179156 bytes","seleniumStack":{"status":7,"type":"NoSuchElement","message":"An element could not be located on the page using the given search parameters.","orgStatusMessage":"no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@title=\"Hide header\"]\"}\n  (Session info: chrome=59.0.3071.109)\n  (Driver info: chromedriver=2.28.455506 (18f6627e265f442a ... (1335 more bytes)"}}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/elements - {"using":"xpath","value":"//div[@title=\"Hide header\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":796606231,"value":[{"ELEMENT":"1"}],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: GET http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/1/displayed - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":931884231,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//div[@title=\"Hide header\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":762174901,"value":{"ELEMENT":"1"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element/1/click - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1778173519,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Help\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1711520506,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return !!document.evaluate;","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":96221592,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return (function executeClientSide(fn, sArr, args) {  var cb = arguments[arguments.length - 1];  var i = 0;  var sArgs = [];  var use, value, xp, cs, tn, res, j, arg;   if (typeof document.querySelect ... (2645 more bytes)","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1783781183,"value":[true],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Help\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1784003508,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return !!document.evaluate;","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1571922144,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return (function executeClientSide(fn, sArr, args) {  var cb = arguments[arguments.length - 1];  var i = 0;  var sArgs = [];  var use, value, xp, cs, tn, res, j, arg;   if (typeof document.querySelect ... (2645 more bytes)","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":69330553,"value":[false],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Help\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":2040099966,"value":{"ELEMENT":"2"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return !!document.evaluate;","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":334504337,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return (function executeClientSide(fn, sArr, args) {  var cb = arguments[arguments.length - 1];  var i = 0;  var sArgs = [];  var use, value, xp, cs, tn, res, j, arg;   if (typeof document.querySelect ... (2645 more bytes)","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1897922470,"value":[false],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/element - {"using":"xpath","value":"//button[text() = \"Settings\"]"}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1759481215,"value":{"ELEMENT":"3"},"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return !!document.evaluate;","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":701898555,"value":true,"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: POST http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4/execute - {"script":"return (function executeClientSide(fn, sArr, args) {  var cb = arguments[arguments.length - 1];  var i = 0;  var sArgs = [];  var use, value, xp, cs, tn, res, j, arg;   if (typeof document.querySelect ... (2649 more bytes)","args":[]}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":890000390,"value":[false],"class":"org.openqa.selenium.remote.Response","status":0}
+COMMAND: DELETE http://0.0.0.0:4444/wd/hub/session/18064ee7-13e8-42cc-aad1-268813d7e1e4 - {}
+RESULT: {"state":"success","sessionId":"18064ee7-13e8-42cc-aad1-268813d7e1e4","hCode":1777264496,"value":null,"class":"org.openqa.selenium.remote.Response","status":0}
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
