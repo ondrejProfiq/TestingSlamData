@@ -10,12 +10,15 @@ describe('INIT tests', () => {
   const buttonUpload = '//label[@class="tool-item sd-tooltip sd-tooltip-r"]';
   const buttonSkipVideo = '//button[text() = "Skip video"]';
   const inputField = '//input[@class="form-control"]';
-  const homeLink = '//a[text() = "Home"]';
-  const nameHeader = '//a[text() = "Name"]';
+  const homeLink = '//a[text()="Home"]';
+  const nameHeader = '//a[text()="Name"]';
   const buttonMenuHidden = '//div[@title="Show header"]';
   const buttonMenuShown = '//div[@title="Hide header"]';
-  const buttonHelp = '//button[text() = "Help"]';
-  const buttonSettings = '//button[text() = "Settings"]';
+  const buttonHelp = '//button[text()="Help"]';
+  const buttonSettings = '//button[text()="Settings"]';
+  const buttonDismissSettings = '//button[text()="Dismiss Settings"]';
+  const fieldSearch = '//input[@class="sd-form-input"]'
+  const tabGroups = '//li[text()="Groups"]';
   //Global variables end
 
   before(() => {
@@ -40,14 +43,14 @@ describe('INIT tests', () => {
   it('INDEX_002 - menu works', () => {
     browser.waitForVisible(buttonMenuHidden);
 
-    // Show meni with buttons
+    // Show menu with buttons
     $(buttonMenuHidden).click();
 
     assert.isTrue($(buttonHelp).isVisible());
     assert.isTrue($(buttonSettings).isVisible());
     assert.isTrue($(buttonMenuShown).isVisible());
 
-    // Hide meni with buttons
+    // Hide menu with buttons
     $(buttonMenuShown).click();
 
     // Wait for animation
@@ -60,6 +63,27 @@ describe('INIT tests', () => {
   });
 
   it('INDEX_003 - settings button works', () => {
+    browser.waitForVisible(buttonMenuHidden);
 
+    // Show menu with buttons
+    $(buttonMenuHidden).click();
+
+    browser.waitUntil(() => {
+      return $(buttonSettings).isVisibleWithinViewport();
+    });
+
+    // solves timing issue
+    browser.pause(100);
+    $(buttonSettings).click();
+
+    browser.waitUntil(() => {
+      return $(buttonDismissSettings).isVisible();
+    })
+
+    assert.isTrue($(buttonDismissSettings).isVisible());
+    assert.isTrue($(fieldSearch).isVisible());
+    assert.isTrue($(tabGroups).isVisible());
+
+    $(buttonDismissSettings).click();
   });
 });
