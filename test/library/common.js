@@ -33,6 +33,10 @@ class Lib {
   static before() {
     browser.url(browser.options.baseUrl);
   }
+
+  static returnButton(title) {
+    return `//button[@title="${title}"]`;
+  }
 }
 
 export default Lib;
