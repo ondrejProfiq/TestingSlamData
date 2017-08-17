@@ -3,6 +3,10 @@ import lib from '../../library/common'
 
 const assert = chai.assert;
 
+/*
+* Sample test for creating simple deck containing table view of queried data
+*/
+
 describe('DECK tests', () => {
   //Global variables
   const buttonSkipVideo = '//button[text() = "Skip video"]';
@@ -22,11 +26,12 @@ describe('DECK tests', () => {
   const buttonCollapse = lib.returnButton('Collapse');
   const buttonNextCard = lib.returnButton('Access next card');
   const buttonQueryCard = lib.returnButton('Insert a Query card');
-  //const textarea = '//div[@class="ace_layer ace_text-layer"]';
+  const buttonBackToFilesystem = lib.returnButton('Back to File System');
   const buttonRunQuery = lib.returnButton('Run Query');
   const buttonPreviewTable = '//button/p[text()="Preview Table"]';
-  //const paginationButtons = '//div[@class="sd-pagination sd-form"]';
-  //const headerAge = '//th[text()="age"]';
+  const untitledWorkspace = '//div[@aria-label="Select Untitled Workspace.slam"]';
+  const buttonRemoveDeck = lib.returnButton('Remove');
+  const buttonConfirmDelete = '//button[text()="Delete"]';
   //Global variables end
 
   before(() => {
@@ -36,32 +41,15 @@ describe('DECK tests', () => {
   });
 
   it('DECK_001 - elements are visible', () => {
-    browser.waitUntil(() => {
-      return $(linkTestDB).isVisibleWithinViewport();
-    });
+    lib.waitAndClick(linkTestDB, 1000);
 
-    $(linkTestDB).click();
+    lib.waitAndClick(linkPatients, 1000);
 
-    browser.waitUntil(() => {
-      return $(linkPatients).isVisibleWithinViewport();
-    });
+    lib.waitAndClick(buttonSkipIntro, 1000);
 
-    $(linkPatients).click();
+    lib.waitAndClick(buttonFlipDeck, 1000);
 
-    browser.waitUntil(() => {
-      return $(buttonSkipIntro).isVisible();
-    });
-    $(buttonSkipIntro).click();
-
-    browser.waitUntil(() => {
-      return $(buttonFlipDeck).isVisible();
-    });
-    $(buttonFlipDeck).click();
-
-    browser.waitUntil(() => {
-      return $(buttonSkipIntro).isVisible();
-    });
-    $(buttonSkipIntro).click();
+    lib.waitAndClick(buttonSkipIntro, 1000);
 
     assert.isTrue($(buttonDeleteCard).isVisible());
     assert.isTrue($(buttonRenameDeck).isVisible());
@@ -74,26 +62,29 @@ describe('DECK tests', () => {
     assert.isTrue($(buttonWrap).isVisible());
     assert.isTrue($(buttonCollapse).isVisible());
 
+    browser.pause(1000);
     $(buttonFlipDeck).click();
-    browser.waitUntil(() => {
-      return $(buttonNextCard).isVisible();
-    });
-    $(buttonNextCard).click();
+    browser.pause(1000);
+    lib.waitAndClick(buttonNextCard);
+    browser.pause(1000);
+    lib.waitAndClick(buttonQueryCard);
 
-    browser.waitUntil(() => {
-      return $(buttonQueryCard).isVisible();
-    })
-    $(buttonQueryCard).click();
-
+    browser.pause(4000);
     for (let i = 0; i < 50; i++) {
       browser.keys('\uE003');
     }
+
     browser.keys('SELECT count(age), age FROM `/test/patients` GROUP BY age');
+
+    browser.pause(1000);
     $(buttonRunQuery).click();
+    browser.pause(1000);
     $(buttonNextCard).click();
-    browser.waitUntil(() => {
-      return $(buttonPreviewTable).isVisible();
-    })
-    $(buttonPreviewTable).click();
+    lib.waitAndClick(buttonPreviewTable, 1000);
+    lib.waitAndClick(buttonBackToFilesystem, 6000);
+    lib.waitAndClick(untitledWorkspace, 2000);
+    lib.waitAndClick(buttonRemoveDeck, 2000);
+    lib.waitAndClick(buttonConfirmDelete, 1000);
+    browser.pause(3000);
   });
 });

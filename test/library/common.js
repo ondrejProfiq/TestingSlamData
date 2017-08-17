@@ -37,6 +37,14 @@ class Lib {
   static returnButton(title) {
     return `//button[@title="${title}"]`;
   }
+
+  static waitAndClick(selector, delay = 0){
+    browser.waitUntil(() => {
+      return $(selector).isVisible();
+    });
+    browser.pause(delay);
+    $(selector).click();
+  }
 }
 
 export default Lib;
