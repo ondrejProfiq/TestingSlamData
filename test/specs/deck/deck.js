@@ -3,6 +3,10 @@ import lib from '../../library/common'
 
 const assert = chai.assert;
 
+/*
+* Sample test for creating simple deck containing table view of queried data
+*/
+
 describe('DECK tests', () => {
   //Global variables
   const buttonSkipVideo = '//button[text() = "Skip video"]';
